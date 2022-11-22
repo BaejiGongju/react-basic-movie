@@ -1,11 +1,11 @@
 import UseEffect from './components/UseEffect';
-import Cleanup from './components/Cleanup';
+import CleanUp from './components/CleanUp';
 
 function App() {
   return (
     <>
       {/* <UseEffect />; */}
-      <Cleanup />
+      <CleanUp />
     </>
   );
 }
