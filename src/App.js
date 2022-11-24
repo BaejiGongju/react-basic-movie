@@ -1,11 +1,7 @@
-import Movie from './components/Movie';
+import Router from './shared/Router';
 
 function App() {
-  return (
-    <>
-      <Movie />
-    </>
-  );
+  return <Router />;
 }
 
 export default App;
