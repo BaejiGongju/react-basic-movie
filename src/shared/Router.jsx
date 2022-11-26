@@ -6,9 +6,11 @@ import DetailPage from '../pages/DetailPage';
 
 const Router = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    // <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Routes>
-        <Route path={`${process.env.PUBLIC_URL}/`} element={<MainPage />} />
+        {/* <Route path={`${process.env.PUBLIC_URL}/`} element={<MainPage />} /> */}
+        <Route path='/' element={<MainPage />} />
         <Route path='/movie/:id' element={<DetailPage />} />
       </Routes>
     </BrowserRouter>

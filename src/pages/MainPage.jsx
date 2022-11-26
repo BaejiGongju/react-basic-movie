@@ -1,7 +1,7 @@
-import MovieList from '../components/MovieList';
+import Main from '../components/Main';
 
 function MainPage() {
-  return <MovieList />;
+  return <Main />;
 }
 
 export default MainPage;

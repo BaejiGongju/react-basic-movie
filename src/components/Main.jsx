@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
+import styles from './Main.module.css';
 
 import Movie from './Movie';
-import styles from './MovieList.module.css';
 
-function MovieList() {
+function Main() {
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
 
@@ -13,6 +13,7 @@ function MovieList() {
         `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.8&sort_by=year`
       )
     ).json();
+
     setMovies(json.data.movies);
     setLoading(false);
   };
@@ -33,6 +34,7 @@ function MovieList() {
         <div className={styles.movies}>
           {movies.map((movie) => (
             <Movie
+              key={movie.id}
               id={movie.id}
               year={movie.year}
               coverImg={movie.medium_cover_image}
@@ -47,4 +49,4 @@ function MovieList() {
   );
 }
 
-export default MovieList;
+export default Main;
