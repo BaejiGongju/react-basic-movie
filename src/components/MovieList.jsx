@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import Movie from './Movie';
+import styles from './MovieList.module.css';
 
 function MovieList() {
   const [loading, setLoading] = useState(true);
@@ -23,14 +24,17 @@ function MovieList() {
   console.log(movies);
 
   return (
-    <div>
+    <div className={styles.container}>
       {loading ? (
-        <h1>Loading...</h1>
+        <div className={styles.loader}>
+          <span>Loading...</span>
+        </div>
       ) : (
-        <div>
+        <div className={styles.movies}>
           {movies.map((movie) => (
             <Movie
               id={movie.id}
+              year={movie.year}
               coverImg={movie.medium_cover_image}
               title={movie.title}
               summary={movie.summary}
