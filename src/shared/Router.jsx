@@ -5,9 +5,9 @@ import Detail from '../components/Detail';
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path='/' element={<MovieList />} />
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<MovieList />} />
         <Route path='/movie/:id' element={<Detail />} />
       </Routes>
     </BrowserRouter>
